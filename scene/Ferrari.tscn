@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgaxbwmm5hrxt"]
+
+[ext_resource type="Script" path="res://scene/gdscript/car_template.gd" id="1_q5fx2"]
+[ext_resource type="ArrayMesh" uid="uid://bfeu4br7kmapj" path="res://3d models/79-ferarri-testarossa/uploads_files_2815401_Ferarri+Testarossa.obj" id="2_ntjje"]
+[ext_resource type="PackedScene" uid="uid://cgdoe1l1lc05y" path="res://scene/canvas_layer.tscn" id="3_i2slp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cm5l7"]
+size = Vector3(3, 0.5, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s4crq"]
+albedo_color = Color(0.345098, 0.345098, 0.345098, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_17rrr"]
+material = SubResource("StandardMaterial3D_s4crq")
+top_radius = 3.0
+bottom_radius = 3.0
+height = 0.5
+radial_segments = 12
+
+[node name="carTemplate" type="VehicleBody3D"]
+script = ExtResource("1_q5fx2")
+
+[node name="carMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.360871, -0.0412066, -0.0179052)
+mesh = ExtResource("2_ntjje")
+
+[node name="carColi" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+shape = SubResource("BoxShape3D_cm5l7")
+
+[node name="frontleft" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.48523, 0.180993, 0.83812)
+use_as_steering = true
+wheel_radius = 0.33
+suspension_stiffness = 50.0
+damping_compression = 1.9
+damping_relaxation = 2.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="frontleft"]
+transform = Transform3D(-4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, 0, 0, 0, 0.1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_17rrr")
+
+[node name="frontright" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.49223, 0.182578, -0.872852)
+use_as_steering = true
+wheel_radius = 0.33
+suspension_stiffness = 50.0
+damping_compression = 1.9
+damping_relaxation = 2.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="frontright"]
+transform = Transform3D(-4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, 0, 0, 0, 0.1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_17rrr")
+
+[node name="backright" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.05, 0.18, -0.955)
+use_as_traction = true
+wheel_radius = 0.33
+suspension_stiffness = 50.0
+damping_compression = 1.9
+damping_relaxation = 2.0
+
+[node name="backleft" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.05323, 0.18248, 0.921325)
+use_as_traction = true
+wheel_radius = 0.33
+suspension_stiffness = 50.0
+damping_compression = 1.9
+damping_relaxation = 2.0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.331, 2, 0)
+
+[node name="CanvasLayer" parent="Camera3D" instance=ExtResource("3_i2slp")]
