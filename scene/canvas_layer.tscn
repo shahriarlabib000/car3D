@@ -10,29 +10,29 @@
 script = ExtResource("1_rjmjk")
 
 [node name="right" type="TouchScreenButton" parent="."]
-position = Vector2(1350, 510)
-scale = Vector2(100, 100)
+position = Vector2(2047, 707)
+scale = Vector2(242, 198)
 texture_normal = SubResource("PlaceholderTexture2D_2i08x")
 texture_pressed = SubResource("PlaceholderTexture2D_h87ru")
 action = "ui_right"
 
 [node name="left" type="TouchScreenButton" parent="."]
-position = Vector2(1200, 510)
-scale = Vector2(100, 100)
+position = Vector2(1645, 713)
+scale = Vector2(221, 196)
 texture_normal = SubResource("PlaceholderTexture2D_2i08x")
 texture_pressed = SubResource("PlaceholderTexture2D_h87ru")
 action = "ui_left"
 
 [node name="forward" type="TouchScreenButton" parent="."]
-position = Vector2(150, 450)
-scale = Vector2(100, 100)
+position = Vector2(146, 545)
+scale = Vector2(188, 210)
 texture_normal = SubResource("PlaceholderTexture2D_2i08x")
 texture_pressed = SubResource("PlaceholderTexture2D_h87ru")
 action = "forward"
 
 [node name="backward" type="TouchScreenButton" parent="."]
-position = Vector2(150, 600)
-scale = Vector2(100, 100)
+position = Vector2(127, 823)
+scale = Vector2(228, 206)
 texture_normal = SubResource("PlaceholderTexture2D_2i08x")
 texture_pressed = SubResource("PlaceholderTexture2D_h87ru")
 action = "backward"
