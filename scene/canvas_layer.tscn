@@ -1,8 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgdoe1l1lc05y"]
+[gd_scene load_steps=12 format=3 uid="uid://cgdoe1l1lc05y"]
 
-[ext_resource type="Script" path="res://scene/gdscript/canvas_layer.gd" id="1_rjmjk"]
+[ext_resource type="Script" uid="uid://ctl4choj3jf36" path="res://scene/gdscript/canvas_layer.gd" id="1_rjmjk"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2i08x"]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xp8f4"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dp5bb"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gjjnk"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oc3i3"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f60wf"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vqic1"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_u14m8"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ii7js"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_y56yj"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_h87ru"]
 
@@ -10,36 +26,41 @@
 script = ExtResource("1_rjmjk")
 
 [node name="right" type="TouchScreenButton" parent="."]
+texture_filter = 1
 position = Vector2(2047, 707)
 scale = Vector2(242, 198)
-texture_normal = SubResource("PlaceholderTexture2D_2i08x")
-texture_pressed = SubResource("PlaceholderTexture2D_h87ru")
+texture_normal = SubResource("PlaceholderTexture2D_xp8f4")
+texture_pressed = SubResource("PlaceholderTexture2D_dp5bb")
 action = "ui_right"
 
 [node name="left" type="TouchScreenButton" parent="."]
+texture_filter = 1
 position = Vector2(1645, 713)
 scale = Vector2(221, 196)
-texture_normal = SubResource("PlaceholderTexture2D_2i08x")
-texture_pressed = SubResource("PlaceholderTexture2D_h87ru")
+texture_normal = SubResource("PlaceholderTexture2D_gjjnk")
+texture_pressed = SubResource("PlaceholderTexture2D_oc3i3")
 action = "ui_left"
 
 [node name="forward" type="TouchScreenButton" parent="."]
+texture_filter = 1
 position = Vector2(146, 545)
 scale = Vector2(188, 210)
-texture_normal = SubResource("PlaceholderTexture2D_2i08x")
-texture_pressed = SubResource("PlaceholderTexture2D_h87ru")
+texture_normal = SubResource("PlaceholderTexture2D_f60wf")
+texture_pressed = SubResource("PlaceholderTexture2D_vqic1")
 action = "forward"
 
 [node name="backward" type="TouchScreenButton" parent="."]
+texture_filter = 1
 position = Vector2(127, 823)
 scale = Vector2(228, 206)
-texture_normal = SubResource("PlaceholderTexture2D_2i08x")
-texture_pressed = SubResource("PlaceholderTexture2D_h87ru")
+texture_normal = SubResource("PlaceholderTexture2D_u14m8")
+texture_pressed = SubResource("PlaceholderTexture2D_ii7js")
 action = "backward"
 
 [node name="reload" type="TouchScreenButton" parent="."]
+texture_filter = 1
 scale = Vector2(100, 100)
-texture_normal = SubResource("PlaceholderTexture2D_2i08x")
+texture_normal = SubResource("PlaceholderTexture2D_y56yj")
 texture_pressed = SubResource("PlaceholderTexture2D_h87ru")
 action = "ui_redo"
 

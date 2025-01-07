@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccap2lu5w7s2x"]
+
+[ext_resource type="Script" uid="uid://ctxubi4jysen8" path="res://scene/tire_trail.gd" id="1_utv53"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_utv53"]
+cull_mode = 2
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="tireTrail" type="MeshInstance3D"]
+top_level = true
+material_override = SubResource("StandardMaterial3D_utv53")
+cast_shadow = 0
+script = ExtResource("1_utv53")
+offset = Vector3(0.1, 0, 0)

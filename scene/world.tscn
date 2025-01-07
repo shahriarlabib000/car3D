@@ -1,8 +1,9 @@
-[gd_scene load_steps=52 format=4 uid="uid://dbq1b77wpuynn"]
+[gd_scene load_steps=53 format=4 uid="uid://dbq1b77wpuynn"]
 
-[ext_resource type="Script" path="res://scene/gdscript/world.gd" id="1_y4x8u"]
+[ext_resource type="Script" uid="uid://d28k30h86vpu7" path="res://scene/gdscript/world.gd" id="1_y4x8u"]
 [ext_resource type="Texture2D" uid="uid://rj0ysfja112n" path="res://texture/earth-texture/696.jpg" id="3_1ykw1"]
 [ext_resource type="PackedScene" uid="uid://ritkh0kvcyfc" path="res://scene/lowPolyCar.tscn" id="3_6iwc8"]
+[ext_resource type="PackedScene" uid="uid://cgdoe1l1lc05y" path="res://scene/canvas_layer.tscn" id="4_m5mgf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5dnkh"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -886,3 +887,5 @@ mesh = SubResource("BoxMesh_yfkmy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="building"]
 shape = SubResource("ConcavePolygonShape3D_ej6ej")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_m5mgf")]

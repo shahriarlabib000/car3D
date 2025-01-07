@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=4 uid="uid://ritkh0kvcyfc"]
 
-[ext_resource type="Script" path="res://scene/gdscript/car_template.gd" id="1_2jrxm"]
-[ext_resource type="PackedScene" uid="uid://cgdoe1l1lc05y" path="res://scene/canvas_layer.tscn" id="2_bywcc"]
+[ext_resource type="Script" uid="uid://bbks4cyerjhyq" path="res://scene/gdscript/car_template.gd" id="1_2jrxm"]
+[ext_resource type="PackedScene" uid="uid://ccap2lu5w7s2x" path="res://scene/tire_trail.tscn" id="2_b1qjr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h1npm"]
 resource_name = "chasis"
@@ -319,9 +319,29 @@ top_level = true
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.5, -6)
 current = true
 
-[node name="CanvasLayer" parent="pivot/frontCam" instance=ExtResource("2_bywcc")]
-
 [node name="backCam" type="Camera3D" parent="pivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.194418, 1.65651, 6.34904)
 
-[node name="CanvasLayer" parent="pivot/backCam" instance=ExtResource("2_bywcc")]
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.10315, -0.955124, 1.9948)
+
+[node name="Marker3D2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.103, -0.955, 1.995)
+
+[node name="Marker3D3" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.103, -0.955, -1.71759)
+
+[node name="Marker3D4" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.103, -0.955, -1.718)
+
+[node name="tireTrail" parent="." node_paths=PackedStringArray("marker") instance=ExtResource("2_b1qjr")]
+marker = NodePath("../Marker3D")
+
+[node name="tireTrail2" parent="." node_paths=PackedStringArray("marker") instance=ExtResource("2_b1qjr")]
+marker = NodePath("../Marker3D2")
+
+[node name="tireTrail3" parent="." node_paths=PackedStringArray("marker") instance=ExtResource("2_b1qjr")]
+marker = NodePath("../Marker3D3")
+
+[node name="tireTrail4" parent="." node_paths=PackedStringArray("marker") instance=ExtResource("2_b1qjr")]
+marker = NodePath("../Marker3D4")
