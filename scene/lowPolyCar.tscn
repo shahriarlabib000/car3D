@@ -313,14 +313,22 @@ mesh = SubResource("CylinderMesh_2xu07")
 skeleton = NodePath("../..")
 
 [node name="pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 top_level = true
 
-[node name="frontCam" type="Camera3D" parent="pivot"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.5, -6)
+[node name="SpringArm3D" type="SpringArm3D" parent="pivot"]
+spring_length = -8.0
+
+[node name="frontCam" type="Camera3D" parent="pivot/SpringArm3D"]
+unique_name_in_owner = true
 current = true
 
-[node name="backCam" type="Camera3D" parent="pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.194418, 1.65651, 6.34904)
+[node name="SpringArm3D2" type="SpringArm3D" parent="pivot"]
+spring_length = 8.0
+margin = 2.0
+
+[node name="backCam" type="Camera3D" parent="pivot/SpringArm3D2"]
+unique_name_in_owner = true
 
 [node name="Marker3D" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.10315, -0.955124, 1.9948)

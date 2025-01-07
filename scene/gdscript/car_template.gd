@@ -4,8 +4,8 @@ var max_rpm=5000
 var max_torque=500
 
 @onready var pivot= $pivot
-@onready var frontCam= $pivot/frontCam
-@onready var backCam=$pivot/backCam
+@onready var frontCam= %frontCam
+@onready var backCam= %backCam
 
 var lookAt
 func _ready():
@@ -21,8 +21,8 @@ func _physics_process(delta):
 	rpm= abs($backright.get_rpm())
 	$backright.engine_force = accelaration * max_torque *(1 - rpm / max_rpm)
 	
-	pivot.global_position= pivot.global_position.lerp(global_position, delta * 20)
-	pivot.transform=pivot.transform.interpolate_with(transform, delta * 5)
+	pivot.global_position= pivot.global_position.lerp(global_position + Vector3(0,3,0), delta * 20)
+	pivot.transform= pivot.transform.interpolate_with(transform, delta * 5)
 	#lookAt= lookAt.lerp(global_position + linear_velocity,delta * 5)
 	lookAt= global_position#lookAt.lerp(global_position, delta * 5)
 	frontCam.look_at(lookAt)
@@ -31,7 +31,7 @@ func _physics_process(delta):
 	
 	
 func _check_camera_switch():
-	if Input.is_action_pressed("backward") && $backright.get_rpm() < 0:
+	if  $backright.get_rpm() < -5:
 		backCam.current=true
 	else:
 		frontCam.current=true
