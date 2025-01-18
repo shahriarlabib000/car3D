@@ -2,7 +2,7 @@ extends MeshInstance3D
 
 var points:Array[Vector3] = []
 @export var marker:Marker3D
-@export var size := 500
+@export var size := 300
 @export var offset := Vector3(0.2,0,0)
 func _ready() -> void:
 	mesh = ImmediateMesh.new()

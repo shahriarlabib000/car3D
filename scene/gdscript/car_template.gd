@@ -31,7 +31,7 @@ func _physics_process(delta):
 	
 	
 func _check_camera_switch():
-	if  $backright.get_rpm() < -5:
+	if $backleft.get_rpm() < -10:
 		backCam.current=true
 	else:
 		frontCam.current=true
