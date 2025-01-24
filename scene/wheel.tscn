@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb7vchql3gc3c"]
+
+[ext_resource type="ArrayMesh" uid="uid://bgsokafjqam58" path="res://3d models/18-tire/tire.obj" id="1_jvtuh"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="wheel" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.472203, -0.0692806)
+mesh = ExtResource("1_jvtuh")

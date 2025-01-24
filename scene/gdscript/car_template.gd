@@ -23,7 +23,7 @@ func _physics_process(delta):
 	
 	pivot.global_position= pivot.global_position.lerp(global_position + Vector3(0,3,0), delta * 20)
 	pivot.transform= pivot.transform.interpolate_with(transform, delta * 5)
-	#lookAt= lookAt.lerp(global_position + linear_velocity,delta * 5)
+	lookAt= lookAt.lerp(global_position + linear_velocity,delta * 5)
 	lookAt= global_position#lookAt.lerp(global_position, delta * 5)
 	frontCam.look_at(lookAt)
 	backCam.look_at(lookAt)
