@@ -1,22 +1,21 @@
 extends VehicleBody3D
 
-var max_rpm=5000
-var max_torque=5000
+@export var max_torque = 5000
 
-@onready var pivot= $pivot
-@onready var frontCam= %frontCam
-@onready var backCam= %backCam
+@onready var pivot = $pivot
+@onready var frontCam = %frontCam
+@onready var backCam = %backCam
 
 var lookAt
 func _ready():
 	lookAt= global_position
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	steering =lerp(steering, Input.get_axis("ui_right","ui_left") * 0.4,5 * delta)
+	steering = lerp(steering, Input.get_axis("ui_right","ui_left") * 0.4,5 * delta)
 	
 	var accelaration = Input.get_axis("backward","forward") 
-	var rpm= abs($backleft.get_rpm())
-	engine_force= accelaration * max_torque * (1 - rpm/ max_rpm) * delta * 120
+	#var rpm= abs($backleft.get_rpm())
+	engine_force = accelaration * max_torque
 
 	#camera
 	pivot.global_position= pivot.global_position.lerp(global_position + Vector3(0,3,0), delta * 20)

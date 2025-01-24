@@ -7,7 +7,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-@warning_ignore("unused_parameter")
-func _process(delta):
+func _process(_delta):
+	%speed.text = str("%.3f" %$"Nissan GTR".linear_velocity.length())
 	if Input.is_action_just_pressed("ui_redo"):
 		get_tree().reload_current_scene()

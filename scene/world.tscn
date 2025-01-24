@@ -879,6 +879,20 @@ shape = SubResource("ConcavePolygonShape3D_6c1fg")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("4_m5mgf")]
 
+[node name="speed" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -134.5
+offset_right = 134.5
+offset_bottom = 175.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 128
+text = "hola"
+
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
 top_level = true
 use_collision = true
