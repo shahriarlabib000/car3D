@@ -1,7 +1,7 @@
 extends VehicleBody3D
 
 var max_rpm=5000
-var max_torque=500
+var max_torque=5000
 
 @onready var pivot= $pivot
 @onready var frontCam= %frontCam
