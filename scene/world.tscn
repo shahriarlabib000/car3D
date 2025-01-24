@@ -1,7 +1,7 @@
 [gd_scene load_steps=52 format=4 uid="uid://dbq1b77wpuynn"]
 
 [ext_resource type="Script" uid="uid://d28k30h86vpu7" path="res://scene/gdscript/world.gd" id="1_y4x8u"]
-[ext_resource type="Texture2D" uid="uid://beo1pcwaww164" path="res://texture/M3_Neo_Tokyo_equirectangular-png_sunrise_over_the_dense_1749996386_12892767.png" id="2_emkrx"]
+[ext_resource type="Texture2D" uid="uid://ctpvhie6s0q1x" path="res://texture/AllSkyFree_Sky_EpicGloriousPink_Equirect.png" id="2_emkrx"]
 [ext_resource type="Texture2D" uid="uid://rj0ysfja112n" path="res://texture/earth-texture/696.jpg" id="3_1ykw1"]
 [ext_resource type="PackedScene" uid="uid://ritkh0kvcyfc" path="res://scene/lowPolyCar.tscn" id="3_6iwc8"]
 [ext_resource type="PackedScene" uid="uid://cgdoe1l1lc05y" path="res://scene/canvas_layer.tscn" id="4_m5mgf"]
