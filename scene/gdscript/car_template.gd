@@ -16,11 +16,9 @@ func _physics_process(delta):
 	
 	var accelaration = Input.get_axis("backward","forward") 
 	var rpm= abs($backleft.get_rpm())
-	$backleft.engine_force= accelaration * max_torque * (1 - rpm/ max_rpm)
-	
-	rpm= abs($backright.get_rpm())
-	$backright.engine_force = accelaration * max_torque *(1 - rpm / max_rpm)
-	
+	engine_force= accelaration * max_torque * (1 - rpm/ max_rpm) * delta * 120
+
+	#camera
 	pivot.global_position= pivot.global_position.lerp(global_position + Vector3(0,3,0), delta * 20)
 	pivot.transform= pivot.transform.interpolate_with(transform, delta * 5)
 	lookAt= lookAt.lerp(global_position + linear_velocity,delta * 5)
