@@ -12,10 +12,9 @@ panorama = ExtResource("2_emkrx")
 [sub_resource type="Sky" id="Sky_hcb8y"]
 sky_material = SubResource("PanoramaSkyMaterial_0tg4p")
 
-[sub_resource type="Environment" id="Environment_m5mgf"]
+[sub_resource type="Environment" id="Environment_y3jn2"]
 background_mode = 2
 sky = SubResource("Sky_hcb8y")
-reflected_light_source = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fya6y"]
 resource_name = "pavement"
@@ -683,7 +682,7 @@ point_count = 13
 script = ExtResource("1_y4x8u")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_m5mgf")
+environment = SubResource("Environment_y3jn2")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.776879, -0.409375, -0.478405, -0.373874, -0.311435, 0.873629, -0.506633, 0.857566, 0.0888922, 0, 0.617451, 0)

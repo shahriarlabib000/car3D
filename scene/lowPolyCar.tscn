@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=4 uid="uid://ritkh0kvcyfc"]
+[gd_scene load_steps=16 format=4 uid="uid://ritkh0kvcyfc"]
 
 [ext_resource type="Script" uid="uid://bbks4cyerjhyq" path="res://scene/gdscript/car_template.gd" id="1_2jrxm"]
 [ext_resource type="PackedScene" uid="uid://ccap2lu5w7s2x" path="res://scene/tire_trail.tscn" id="2_b1qjr"]
 [ext_resource type="PackedScene" uid="uid://bb7vchql3gc3c" path="res://scene/wheel.tscn" id="2_imrlt"]
+[ext_resource type="AudioStream" uid="uid://twi813fifgid" path="res://sounds/engine.wav" id="4_gm5ib"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h1npm"]
 resource_name = "chasis"
@@ -343,3 +344,9 @@ marker = NodePath("../Marker3D3")
 
 [node name="tireTrail4" parent="." node_paths=PackedStringArray("marker") instance=ExtResource("2_b1qjr")]
 marker = NodePath("../Marker3D4")
+
+[node name="engineSound" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.20736)
+stream = ExtResource("4_gm5ib")
+pitch_scale = 0.5
+autoplay = true
