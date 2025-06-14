@@ -2,14 +2,6 @@
 
 [ext_resource type="Script" uid="uid://ctl4choj3jf36" path="res://scene/gdscript/canvas_layer.gd" id="1_rjmjk"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xp8f4"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dp5bb"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gjjnk"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oc3i3"]
-
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f60wf"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vqic1"]
@@ -22,24 +14,16 @@
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_h87ru"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gjjnk"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oc3i3"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xp8f4"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dp5bb"]
+
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_rjmjk")
-
-[node name="right" type="TouchScreenButton" parent="."]
-texture_filter = 1
-position = Vector2(1647, 700)
-scale = Vector2(242, 198)
-texture_normal = SubResource("PlaceholderTexture2D_xp8f4")
-texture_pressed = SubResource("PlaceholderTexture2D_dp5bb")
-action = "ui_right"
-
-[node name="left" type="TouchScreenButton" parent="."]
-texture_filter = 1
-position = Vector2(1245, 700)
-scale = Vector2(221, 196)
-texture_normal = SubResource("PlaceholderTexture2D_gjjnk")
-texture_pressed = SubResource("PlaceholderTexture2D_oc3i3")
-action = "ui_left"
 
 [node name="forward" type="TouchScreenButton" parent="."]
 texture_filter = 1
@@ -74,3 +58,44 @@ text = "koko
 "
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="fullscreen" type="Button" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 48
+toggle_mode = true
+text = "Fullscreen "
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="left" type="TouchScreenButton" parent="Control"]
+texture_filter = 1
+position = Vector2(-635, -340)
+scale = Vector2(221, 196)
+texture_normal = SubResource("PlaceholderTexture2D_gjjnk")
+texture_pressed = SubResource("PlaceholderTexture2D_oc3i3")
+action = "ui_left"
+
+[node name="right" type="TouchScreenButton" parent="Control"]
+texture_filter = 1
+position = Vector2(-233, -340)
+scale = Vector2(242, 198)
+texture_normal = SubResource("PlaceholderTexture2D_xp8f4")
+texture_pressed = SubResource("PlaceholderTexture2D_dp5bb")
+action = "ui_right"
+
+[connection signal="toggled" from="fullscreen" to="." method="_on_fullscreen_toggled"]
