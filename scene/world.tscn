@@ -666,10 +666,10 @@ uv1_triplanar = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7djpt"]
 material = SubResource("StandardMaterial3D_eeltc")
-size = Vector2(10000, 10000)
+size = Vector2(1000, 1000)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6c1fg"]
-data = PackedVector3Array(5000, 0, 5000, -5000, 0, 5000, 5000, 0, -5000, -5000, 0, 5000, -5000, 0, -5000, 5000, 0, -5000)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_emkrx"]
+data = PackedVector3Array(500, 0, 500, -500, 0, 500, 500, 0, -500, -500, 0, 500, -500, 0, -500, 500, 0, -500)
 
 [sub_resource type="Curve3D" id="Curve3D_emkrx"]
 _data = {
@@ -686,7 +686,7 @@ environment = SubResource("Environment_y3jn2")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.776879, -0.409375, -0.478405, -0.373874, -0.311435, 0.873629, -0.506633, 0.857566, 0.0888922, 0, 0.617451, 0)
-shadow_enabled = true
+light_energy = 3.0
 metadata/_edit_lock_ = true
 
 [node name="Nissan GTR" parent="." instance=ExtResource("3_6iwc8")]
@@ -874,7 +874,7 @@ metadata/_edit_lock_ = true
 [node name="StaticBody3D" type="StaticBody3D" parent="floor"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_6c1fg")
+shape = SubResource("ConcavePolygonShape3D_emkrx")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("4_m5mgf")]
 
@@ -894,6 +894,7 @@ text = "hola"
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
 top_level = true
+visible = false
 use_collision = true
 polygon = PackedVector2Array(-5, 0, 5, 1, 5, 1, 0, 0)
 mode = 2
@@ -902,6 +903,7 @@ path_interval_type = 0
 path_interval = 1.0
 path_simplify_angle = 0.0
 path_rotation = 2
+path_rotation_accurate = false
 path_local = false
 path_continuous_u = true
 path_u_distance = 1.0
@@ -910,4 +912,5 @@ metadata/_edit_lock_ = true
 
 [node name="Path3D" type="Path3D" parent="."]
 transform = Transform3D(0.999982, -0.0060039, 0, 0.0060039, 0.999982, 0, 0, 0, 1, 0, -0.485093, 0)
+visible = false
 curve = SubResource("Curve3D_emkrx")

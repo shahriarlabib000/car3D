@@ -10,21 +10,21 @@ config_version=5
 
 [application]
 
-config/name="realistic cars(jolt physics)"
+config/name="car3D"
 config/version="0.1"
 run/main_scene="res://scene/world.tscn"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=2400
+window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
 window/size/resizable=false
 window/size/borderless=true
-window/stretch/mode="viewport"
-window/stretch/aspect="ignore"
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [input]
 
@@ -49,3 +49,4 @@ common/physics_ticks_per_second=120
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_s3tc_bptc=true
+scaling_3d/scale=0.8
