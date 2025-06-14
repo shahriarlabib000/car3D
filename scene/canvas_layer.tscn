@@ -27,7 +27,7 @@ script = ExtResource("1_rjmjk")
 
 [node name="right" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(2047, 707)
+position = Vector2(1647, 700)
 scale = Vector2(242, 198)
 texture_normal = SubResource("PlaceholderTexture2D_xp8f4")
 texture_pressed = SubResource("PlaceholderTexture2D_dp5bb")
@@ -35,7 +35,7 @@ action = "ui_right"
 
 [node name="left" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(1645, 713)
+position = Vector2(1245, 700)
 scale = Vector2(221, 196)
 texture_normal = SubResource("PlaceholderTexture2D_gjjnk")
 texture_pressed = SubResource("PlaceholderTexture2D_oc3i3")

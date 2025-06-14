@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://dbq1b77wpuynn"]
+[gd_scene load_steps=51 format=4 uid="uid://dbq1b77wpuynn"]
 
 [ext_resource type="Script" uid="uid://d28k30h86vpu7" path="res://scene/gdscript/world.gd" id="1_y4x8u"]
 [ext_resource type="Texture2D" uid="uid://ctpvhie6s0q1x" path="res://texture/AllSkyFree_Sky_EpicGloriousPink_Equirect.png" id="2_emkrx"]
@@ -666,17 +666,10 @@ uv1_triplanar = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7djpt"]
 material = SubResource("StandardMaterial3D_eeltc")
-size = Vector2(1000, 1000)
+size = Vector2(5000, 5000)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_emkrx"]
-data = PackedVector3Array(500, 0, 500, -500, 0, 500, 500, 0, -500, -500, 0, 500, -500, 0, -500, 500, 0, -500)
-
-[sub_resource type="Curve3D" id="Curve3D_emkrx"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.22783, -0.190797, 1.94601, 0, 0, 0, 0, 0, 0, -1.04827, 1.84251, -3.27242, 0, 0, 0, 0, 0, 0, 2.26324, 2.70416, -10.8024, 0, 0, 0, 0, 0, 0, 10.653, 3.51556, -11.3381, 0, 0, 0, 0, 0, 0, 14.9245, 5.43356, -4.27575, 0, 0, 0, 0, 0, 0, 12.7772, 7.66163, 3.7104, 0, 0, 0, 0, 0, 0, 3.76934, 7.8003, 5.90107, 0, 0, 0, 0, 0, 0, -4.58699, 9.09874, -0.522704, 0, 0, 0, 0, 0, 0, -2.50271, 11.5567, -13.1544, 0, 0, 0, 0, 0, 0, 9.97785, 14.7461, -17.3058, 0, 0, 0, 0, 0, 0, 20.8727, 17.1956, -6.43929, 0, 0, 0, 0, 0, 0, 13.7744, 20.3108, 8.32788, 0, 0, 0, 0, 0, 0, -1.54703, 22.9643, 10.305),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, -0.246172, -0.808948, -0.843226, -1.24772, -1.8865, -1.90014, -2.19312)
-}
-point_count = 13
+data = PackedVector3Array(2500, 0, 2500, -2500, 0, 2500, 2500, 0, -2500, -2500, 0, 2500, -2500, 0, -2500, 2500, 0, -2500)
 
 [node name="world" type="Node3D"]
 script = ExtResource("1_y4x8u")
@@ -891,26 +884,3 @@ size_flags_horizontal = 4
 theme_override_constants/outline_size = 16
 theme_override_font_sizes/font_size = 128
 text = "hola"
-
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
-top_level = true
-visible = false
-use_collision = true
-polygon = PackedVector2Array(-5, 0, 5, 1, 5, 1, 0, 0)
-mode = 2
-path_node = NodePath("../Path3D")
-path_interval_type = 0
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = false
-metadata/_edit_lock_ = true
-
-[node name="Path3D" type="Path3D" parent="."]
-transform = Transform3D(0.999982, -0.0060039, 0, 0.0060039, 0.999982, 0, 0, 0, 1, 0, -0.485093, 0)
-visible = false
-curve = SubResource("Curve3D_emkrx")
