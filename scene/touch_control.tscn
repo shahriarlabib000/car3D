@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3 uid="uid://cgdoe1l1lc05y"]
+
+[ext_resource type="Script" uid="uid://ctl4choj3jf36" path="res://scene/gdscript/canvas_layer.gd" id="1_rjmjk"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_y56yj"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_h87ru"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gjjnk"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oc3i3"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xp8f4"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dp5bb"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f60wf"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vqic1"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_u14m8"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ii7js"]
+
+[node name="touchControl" type="CanvasLayer"]
+script = ExtResource("1_rjmjk")
+
+[node name="reload" type="TouchScreenButton" parent="."]
+texture_filter = 1
+scale = Vector2(100, 100)
+texture_normal = SubResource("PlaceholderTexture2D_y56yj")
+texture_pressed = SubResource("PlaceholderTexture2D_h87ru")
+action = "ui_redo"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 517.0
+offset_top = 7.0
+offset_right = 777.0
+offset_bottom = 149.0
+theme_override_font_sizes/font_size = 60
+text = "koko
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="steer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="left" type="TouchScreenButton" parent="steer"]
+texture_filter = 1
+position = Vector2(-635, -340)
+scale = Vector2(221, 196)
+texture_normal = SubResource("PlaceholderTexture2D_gjjnk")
+texture_pressed = SubResource("PlaceholderTexture2D_oc3i3")
+action = "ui_left"
+
+[node name="right" type="TouchScreenButton" parent="steer"]
+texture_filter = 1
+position = Vector2(-233, -340)
+scale = Vector2(242, 198)
+texture_normal = SubResource("PlaceholderTexture2D_xp8f4")
+texture_pressed = SubResource("PlaceholderTexture2D_dp5bb")
+action = "ui_right"
+
+[node name="forward" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(146, 585)
+scale = Vector2(188, 210)
+texture_normal = SubResource("PlaceholderTexture2D_f60wf")
+texture_pressed = SubResource("PlaceholderTexture2D_vqic1")
+action = "forward"
+
+[node name="backward" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(127, 863)
+scale = Vector2(228, 206)
+texture_normal = SubResource("PlaceholderTexture2D_u14m8")
+texture_pressed = SubResource("PlaceholderTexture2D_ii7js")
+action = "backward"
+
+[node name="speed" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
